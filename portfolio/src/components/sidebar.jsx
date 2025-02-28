@@ -12,7 +12,7 @@ const configIcon = {
 
 export default function Sidebar() {
   return (
-    <div className="fixed top-1/2 translate-y-[-50%] right-0 bg-white/20 rounded-full px-4 py-7 shadow-lg m-5 items-center justify-center">
+    <div className="fixed top-1/2 translate-y-[-50%] right-0 bg-white/20 rounded-full px-4 py-7 shadow-lg m-5 items-center justify-center z-40">
       <ul className="flex flex-col items-center gap-10 cursor-pointer">
         <li>
           <Link to="/" className={`${configIcon.colorMain} ${configIcon.colorHover}`}>

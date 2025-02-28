@@ -1,13 +1,32 @@
 @import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=JetBrains+Mono:wght@400;700&display=swap");
+
+:root {
+  --font-primary: "Poppins", sans-serif; /* Standard-Schriftart */
+  --font-secondary: "Montserrat", sans-serif; /* Überschriften */
+  --font-code: "JetBrains Mono", monospace; /* Code-Elemente */
+}
+
+body {
+  font-family: var(--font-primary);
+}
+h1 {
+  font-family: var(--font-code);
+}
+
+h2,
+h3 {
+  font-family: var(--font-secondary);
+  font-weight: 700;
+}
 
 @theme {
-  --color-primary:#E3312F;
+  --color-primary: #e3312f;
   --spacing-4: 1rem;
-  --bg-site: url('/site-bg.svg'); 
-
-
-
-
+  --bg-site: url("/site-bg.svg");
+  --font-primary: "Poppins", sans-serif; /* Standard-Schriftart */
+  --font-secondary: "Montserrat", sans-serif; /* Überschriften */
+  --font-code: "JetBrains Mono", monospace; /* Code-Elemente */
 }
 
 .bg-main {
