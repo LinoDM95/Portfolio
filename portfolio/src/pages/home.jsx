@@ -1,12 +1,12 @@
-import Particle from "../components/particles";
+import Particle from "../components/animations/particles";
 import Avatar from "../assets/avatar.png";
+import ChangePage from "../components/animations/change_page";
 
 export default function Home() {
   return (
     <div className="flex items-center justify-center h-screen w-screen">
       <Particle />
       <div className="flex flex-col xl:flex-row items-center justify-center z-10 gap-20 h-full w-full">
-        
         <div className="flex flex-col text-white font-semibold text-4xl xl:text-4xl gap-5 w-1/3 h-full justify-center">
           <div>
             <h1 className="font-code text-sm">Hi, mein Name ist</h1>

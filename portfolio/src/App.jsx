@@ -8,21 +8,26 @@ import Contact from "./pages/contact";
 
 import "./App.css";
 
-function App() {
+function AppRoutes() {
+
+  return (
+      <Routes location={location} key={location.pathname}>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/skills" element={<Skills />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+  );
+}
+
+export default function App() {
   return (
     <div className="bg-main h-screen">
       <Router>
         <Sidebar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/skills" element={<Skills />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
+        <AppRoutes />
       </Router>
     </div>
   );
 }
-
-export default App;
