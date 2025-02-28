@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary:#E3312F;
+  --spacing-4: 1rem;
+  --bg-site: url('/site-bg.svg'); 
+
+
+
+
+}
+
+.bg-main {
+  background-image: var(--bg-site);
+  @apply bg-cover bg-center;
+}
