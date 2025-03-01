@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";  // Importiere Link für Navigation
+import { Link } from "react-router-dom";  
 import { TiHome } from "react-icons/ti";
 import { ImUser } from "react-icons/im";
 import { BsFillGridFill } from "react-icons/bs";
@@ -12,30 +12,30 @@ const configIcon = {
 
 export default function Sidebar() {
   return (
-    <div className="fixed top-1/2 translate-y-[-50%] right-0 bg-white/10 backdrop-blur-sm rounded-full px-4 py-7 shadow-lg m-5 items-center justify-center z-40">
-      <ul className="flex flex-col items-center gap-10 cursor-pointer">
-        <li>
-          <Link to="/" className={`${configIcon.colorMain} ${configIcon.colorHover}`}>
+    <div className="fixed top-1/2 translate-y-[-50%] right-0 bg-white/10 backdrop-blur-sm rounded-full px-4 py-7 shadow-lg m-5 z-40">
+      <ul className="flex flex-col items-center gap-10">
+        <li className="transition-all duration-300 hover:scale-110">
+          <Link to="/" className={`${configIcon.colorMain} ${configIcon.colorHover} transition-all duration-300`}>
             <TiHome size={configIcon.size} />
           </Link>
         </li>
-        <li>
-          <Link to="/about" className={`${configIcon.colorMain} ${configIcon.colorHover}`}>
+        <li className="transition-all duration-300 hover:scale-110">
+          <Link to="/about" className={`${configIcon.colorMain} ${configIcon.colorHover} transition-all duration-300`}>
             <ImUser size={configIcon.size} />
           </Link>
         </li>
-        <li>
-          <Link to="/skills" className={`${configIcon.colorMain} ${configIcon.colorHover}`}>
+        <li className="transition-all duration-300 hover:scale-110">
+          <Link to="/skills" className={`${configIcon.colorMain} ${configIcon.colorHover} transition-all duration-300`}>
             <BsFillGridFill size={configIcon.size} />
           </Link>
         </li>
-        <li>
-          <Link to="/projects" className={`${configIcon.colorMain} ${configIcon.colorHover}`}>
+        <li className="transition-all duration-300 hover:scale-110">
+          <Link to="/projects" className={`${configIcon.colorMain} ${configIcon.colorHover} transition-all duration-300`}>
             <RiLayoutTopFill size={configIcon.size} />
           </Link>
         </li>
-        <li>
-          <Link to="/contact" className={`${configIcon.colorMain} ${configIcon.colorHover}`}>
+        <li className="transition-all duration-300 hover:scale-110">
+          <Link to="/contact" className={`${configIcon.colorMain} ${configIcon.colorHover} transition-all duration-300`}>
             <RiContactsBookFill size={configIcon.size} />
           </Link>
         </li>

@@ -12,7 +12,7 @@ export default function Home() {
             <h1 className="font-code text-sm">Hi, mein Name ist</h1>
             <h2>Lino De Marco</h2>
             <h3>
-              Ich bin ein angehender
+              Ich bin angehender
               <span className="text-primary"> Software Entwickler.</span>
             </h3>
           </div>
