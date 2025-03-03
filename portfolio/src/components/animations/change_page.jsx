@@ -1,28 +1,50 @@
 import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
 
-export default function ChangePage({ onComplete }) {
-  const [show, setShow] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShow(false);
-      onComplete(); // Callback, um den Seiteninhalt zu laden
-    }, 1000); // 1 Sekunde Animation
-
-    return () => clearTimeout(timer);
-  }, [onComplete]);
-
-  if (!show) return null; // Sobald die Animation fertig ist, wird sie entfernt
+export default function ChangePage() {
+  const transitionVariants = {
+    inital: {
+      x: "100%",
+      width: "100%",
+    },
+    animate: {
+      x: "0%",
+      width: "0%",
+    },
+    exit: {
+      x: ["0%", "100%"],
+      width: ["0%", "100%"],
+    },
+  };
 
   return (
-    <motion.div
-      initial={{ opacity: 1, scaleX: 1 }}
-      animate={{ opacity: 0, scaleX: 0 }}
-      transition={{ duration: 1, ease: "easeInOut" }}
-      className="fixed inset-0 bg-black z-50 flex items-center justify-center text-white text-3xl"
-    >
-      Lade neue Seite...
-    </motion.div>
+    <>
+      <motion.div className="fixed top-0 bottom-0 right-full w-screen h-screen bg-[#2e2257] z-30" 
+      variants={transitionVariants}
+      initial="inital"
+      animate="animate"
+      exit="exit"
+      transition={{delay: 0.2, duration:0.6, ease: "easeInOut"}}
+      
+      >
+      </motion.div>
+      <motion.div className="fixed top-0 bottom-0 right-full w-screen h-screen bg-[#3b2d71] z-20" 
+      variants={transitionVariants}
+      initial="inital"
+      animate="animate"
+      exit="exit"
+      transition={{delay: 0.4, duration:0.6, ease: "easeInOut"}}
+      
+      >
+      </motion.div>
+      <motion.div className="fixed top-0 bottom-0 right-full w-screen h-screen bg-[#4b3792] z-10" 
+      variants={transitionVariants}
+      initial="inital"
+      animate="animate"
+      exit="exit"
+      transition={{delay: 0.6, duration:0.6, ease: "easeInOut"}}
+      
+      >
+      </motion.div>
+    </>
   );
 }

@@ -30,11 +30,6 @@ export default function Sidebar() {
           </Link>
         </li>
         <li className="transition-all duration-300 hover:scale-110">
-          <Link to="/projects" className={`${configIcon.colorMain} ${configIcon.colorHover} transition-all duration-300`}>
-            <RiLayoutTopFill size={configIcon.size} />
-          </Link>
-        </li>
-        <li className="transition-all duration-300 hover:scale-110">
           <Link to="/contact" className={`${configIcon.colorMain} ${configIcon.colorHover} transition-all duration-300`}>
             <RiContactsBookFill size={configIcon.size} />
           </Link>
