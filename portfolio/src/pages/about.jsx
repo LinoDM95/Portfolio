@@ -11,7 +11,6 @@ import { FaPython } from "react-icons/fa";
 import { SiDjango } from "react-icons/si";
 import { GrMysql } from "react-icons/gr";
 
-import WaterDropGrid from "../components/animations/animated_dots";
 import BulbImg from "../components/images/bulb_img";
 
 export default function About() {
@@ -39,7 +38,7 @@ export default function About() {
               className="flex flex-col w-1/3 gap-5"
             >
               <h2 className="font-semibold text-4xl ">
-                Hier ist <span className="text-primary">Platz</span>für was
+                Hier ist <span className="text-primary">Platz</span> für was
                 kreatives?
               </h2>
               <p className="text-gray-300">
