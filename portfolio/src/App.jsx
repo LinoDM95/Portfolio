@@ -11,7 +11,7 @@ import Sidebar from "./components/sidebar";
 // Pages
 import Home from "./pages/home";
 import About from "./pages/about";
-import Projects from "./pages/projects";
+import Work from "./pages/work";
 import Contact from "./pages/contact";
 // Animations
 import { AnimatePresence, motion } from "framer-motion";
@@ -30,7 +30,7 @@ function AppRoutes() {
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/projects" element={<Projects />} />
+          <Route path="/work" element={<Work />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </motion.div>

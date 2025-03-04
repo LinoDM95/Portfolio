@@ -32,7 +32,7 @@ export default function Sidebar() {
         </li>
         <li className="transition-all duration-300 hover:scale-110">
           <Link
-            to="/projects"
+            to="/work"
             className={`${configIcon.colorMain} ${configIcon.colorHover} transition-all duration-300`}
           >
             <BsFillGridFill size={configIcon.size} />
