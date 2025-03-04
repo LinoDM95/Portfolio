@@ -20,7 +20,6 @@ export default function About() {
     textSize: "font-bold",
   };
 
-  // Dynamische Click-Handler-Funktion
   function handleTabClick(tab) {
     setActiveTab(tab);
   }
@@ -35,17 +34,12 @@ export default function About() {
               initial={{ x: -20, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ delay: 0.8, duration: 1, ease: "easeInOut" }}
-              className="flex flex-col w-1/3 gap-5"
-            >
+              className="flex flex-col w-1/3 gap-5">
               <h2 className="font-semibold text-4xl ">
-                Hier ist <span className="text-primary">Platz</span> für was
-                kreatives?
+              Von Daten zur  <span className="text-primary">Software</span> – mein Weg zum Software Entwickler.
               </h2>
               <p className="text-gray-300">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem,
-                ipsam! Debitis voluptas ullam deleniti. Molestias nobis
-                distinctio cumque tempora vel odio a aliquam aliquid. A
-                praesentium error excepturi itaque ratione!
+              Während meiner Weiterbildung in der Datenanalyse habe ich meine Leidenschaft für Softwareentwicklung entdeckt. In der Zeit habe ich mir Full-Stack Development beigebracht und wurde dabei vom CEO der co-dex GmbH begleitet. Jetzt kombiniere ich meine Datenkenntnisse mit der Softwareentwicklung, indem ich beispielsweise mit SQL arbeite, um Datenbanken zu managen und die Daten in Python verarbeite. Anschließend bin ich in der Lage diese Daten im Frontend darzustellen.
               </p>
               <div className="pointer-events-auto ">
                 <ButtonMain title="Lebenslauf herunterladen" />
