@@ -4,14 +4,12 @@ import "swiper/css";
 import "swiper/css/effect-cube";
 import "swiper/css/pagination";
 import { EffectCube, Pagination } from "swiper/modules";
-import { h2 } from "framer-motion/client";
 
-export default function CardCarousel(onH) {
-  const [onHover, setOnHover] = useState(null);
+export default function CardCarousel({ onSlideHover }) {
 
   const slidesData = [
     {
-      title: "SnippetVault.",
+      title: "SnippetVault",
       description:
         "Snippet​Vault ist ein Tool, das entwickelt wurde, um Code-Snippets effizient und strukturiert zu speichern. Es ermöglicht einen schnellen Zugriff auf Ihre Snippets, um den Arbeitsfluss nicht zu unterbrechen. Durch die tabellarische Struktur werden unübersichtliche Textdateien vermieden.",
       Username: "Benutzername: guest",
@@ -23,21 +21,21 @@ export default function CardCarousel(onH) {
       description: "Beschreibung für Slide 2.",
     },
     {
-      title: "Data Analysis",
+      title: "DataAnalysis",
       description: "Beschreibung für Slide 3.",
-    },
-    {
-      title: "Titel 4",
-      description: "Beschreibung für Slide 4.",
     },
   ];
 
-  const handleMouseEnter = (index) => {
-    setOnHover(index);
+  function handleMouseEnter(index) {
+    if (onSlideHover) {
+      onSlideHover(index, slidesData[index]);
+    }
   };
 
-  const handleMouseLeave = () => {
-    setOnHover(null);
+  function handleMouseLeave() {
+    if (onSlideHover) {
+      onSlideHover(null, null);
+    }
   };
 
   return (
