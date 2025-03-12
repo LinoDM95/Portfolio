@@ -34,16 +34,47 @@ export default function About() {
   return (
     <>
       <BulbImg />
-      <div className="fixed flex items-center justify-center min-h-screen text-white z-1">
-        <div className="flex flex-col gap-10 z-40 pointer-events-none ml-50">
-          <div className="flex gap-30">
+      <div
+        className="
+          relative
+          min-h-screen
+          w-full
+          text-white
+          z-1
+          overflow-hidden
+
+          md:fixed
+          md:flex
+          md:items-center
+          md:justify-center
+          md:min-h-screen
+        "
+      >
+        <div
+          className="
+            flex flex-col
+            gap-10
+            z-40
+            pointer-events-none
+            x-auto
+            mt-10
+            md:mt-0
+            md:ml-50
+          "
+        >
+          <div className="flex flex-col gap-10 md:flex-row md:gap-30 ">
             <motion.div
               initial={{ x: -20, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ delay: 0.8, duration: 1, ease: "easeInOut" }}
-              className="flex flex-col w-1/3 gap-5"
+              className="
+                flex flex-col
+                gap-5
+                pointer-events-auto
+                w-full md:w-1/3
+              "
             >
-              <h2 className="font-semibold text-4xl ">
+              <h2 className="font-semibold text-2xl md:text-4xl">
                 Von Daten zur <span className="text-primary">Software</span> –
                 mein Weg zum Software Entwickler.
               </h2>
@@ -57,7 +88,7 @@ export default function About() {
                 die Daten in Python verarbeite. Anschließend werden diese Daten
                 im Frontend dargestellt.
               </p>
-              <div className="pointer-events-auto ">
+              <div className="hidden pointer-events-auto">
                 <ButtonMain
                   title="Lebenslauf herunterladen"
                   onClick={downloadPDF}
@@ -69,9 +100,14 @@ export default function About() {
               initial={{ x: 20, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ delay: 0.8, duration: 1, ease: "easeInOut" }}
-              className="flex flex-col w-1/3 gap-5 pointer-events-auto"
+              className="
+                flex flex-col
+                gap-5
+                pointer-events-auto
+                w-full md:w-1/3
+              "
             >
-              <div className="flex flex-col md:flex-row gap-10">
+              <div className="flex flex-row md:flex-row gap-10">
                 <ButtonLink
                   title="Sprachen"
                   textSize={buttonConfig.textSize}
@@ -91,25 +127,25 @@ export default function About() {
                   isActive={activeTab === "motivation"}
                 />
               </div>
-              <div className=" w-full text-gray-300">
+              <div className="w-full text-gray-300 h-32 overflow-y-auto sm:h-auto sm:overflow-hidde">
                 {activeTab === "language" && (
                   <div className="flex flex-col gap-1">
                     <div>
                       <h2>Frontend: </h2>
-                      <p className="flex items-center">
-                        HTML&nbsp;
-                        <FaHtml5 color="white" />, CSS&nbsp;
-                        <RiTailwindCssFill color="white" />, JavaScript&nbsp;
-                        <IoLogoJavascript color="white" />, React&nbsp;
+                      <p className="flex items-center flex-wrap gap-2">
+                        HTML
+                        <FaHtml5 color="white" />, CSS
+                        <RiTailwindCssFill color="white" />, JavaScript
+                        <IoLogoJavascript color="white" />, React
                         <FaReact color="white" />
                       </p>
                     </div>
                     <div>
                       <h2>Backend: </h2>
-                      <p className="flex items-center">
-                        Python&nbsp;
-                        <FaPython color="white" />, Django&nbsp;
-                        <SiDjango color="white" />, SQL&nbsp;
+                      <p className="flex items-center flex-wrap gap-2">
+                        Python
+                        <FaPython color="white" />, Django
+                        <SiDjango color="white" />, SQL
                         <GrMysql color="white" />
                       </p>
                     </div>

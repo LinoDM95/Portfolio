@@ -66,7 +66,7 @@ export default function CardCarousel({ onSlideHover }) {
             onMouseEnter={() => handleMouseEnter(index)}
             onMouseLeave={handleMouseLeave}
           >
-            <div className="p-6 text-white border-1 bg-[#2e2257] border-primary rounded-lg shadow-md h-100">
+            <div className="p-6 text-white border-1 bg-[#2e2257] border-primary rounded-lg shadow-md h-100 overflow-y-scroll sm:overflow-hidden">
               <h3 className="text-xl font-bold mb-2">{slide.title}</h3>
               <p className="text-gray-300 mb-5">{slide.description}</p>
               {slide.Url && (

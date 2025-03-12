@@ -12,8 +12,22 @@ const configIcon = {
 
 export default function Sidebar() {
   return (
-    <div className="fixed top-1/2 translate-y-[-50%] right-0 bg-white/10 backdrop-blur-sm rounded-full px-4 py-7 shadow-lg m-5 z-40">
-      <ul className="flex flex-col items-center gap-10">
+    // Im Mobile-Modus: Sidebar unten, volle Breite
+    // Im Desktop-Modus: Sidebar rechts in der Mitte
+    <div
+      className="
+        fixed 
+        bottom-0 left-0 right-0 w-full 
+        flex justify-center 
+        bg-white/10 backdrop-blur-sm 
+        px-4 py-3 
+        shadow-lg m-0 
+        z-40
+        lg:top-1/2 lg:translate-y-[-50%] lg:right-0 lg:left-auto lg:w-auto
+        lg:rounded-full lg:py-7 lg:m-5
+      "
+    >
+      <ul className="flex flex-row lg:flex-col items-center justify-center gap-15">
         <li className="transition-all duration-300 hover:scale-110">
           <Link
             to="/"
