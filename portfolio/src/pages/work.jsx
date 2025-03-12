@@ -14,7 +14,7 @@ export default function Work() {
   }
   function getImagePath(title) {
     const imageTitle = title.replace(/\s+/g, "_").toLowerCase();
-    return `/public/${imageTitle}.png`;
+    return `/${imageTitle}.png`;
   }
 
   return (
