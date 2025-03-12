@@ -88,7 +88,7 @@ export default function About() {
                 die Daten in Python verarbeite. Anschließend werden diese Daten
                 im Frontend dargestellt.
               </p>
-              <div className="hidden pointer-events-auto">
+              <div className="hidden lg:block pointer-events-auto">
                 <ButtonMain
                   title="Lebenslauf herunterladen"
                   onClick={downloadPDF}
