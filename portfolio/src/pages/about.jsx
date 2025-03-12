@@ -24,6 +24,13 @@ export default function About() {
     setActiveTab(tab);
   }
 
+  function downloadPDF() {
+    const link = document.createElement("a");
+    link.href = "/Lebenslauf_Lino_De_Marco.pdf"; 
+    link.download = "Lebenslauf_Lino_De_Marco.pdf"; 
+    link.click();
+  };
+
   return (
     <>
       <BulbImg />
@@ -39,10 +46,10 @@ export default function About() {
               Von Daten zur  <span className="text-primary">Software</span> – mein Weg zum Software Entwickler.
               </h2>
               <p className="text-gray-300">
-              Während meiner Weiterbildung in der Datenanalyse habe ich meine Leidenschaft für Softwareentwicklung entdeckt. In der Zeit habe ich mir Full-Stack Development beigebracht und wurde dabei vom CEO der co-dex GmbH begleitet. Jetzt kombiniere ich meine Datenkenntnisse mit der Softwareentwicklung, indem ich beispielsweise mit SQL arbeite, um Datenbanken zu managen und die Daten in Python verarbeite. Anschließend bin ich in der Lage diese Daten im Frontend darzustellen.
+              Während meiner Weiterbildung in der Datenanalyse habe ich meine Leidenschaft für Softwareentwicklung entdeckt. In der Zeit habe ich mir Full-Stack Development beigebracht und wurde dabei vom CEO der co-dex GmbH begleitet. Jetzt kombiniere ich meine Datenkenntnisse mit der Softwareentwicklung, indem ich beispielsweise mit SQL arbeite, um Datenbanken zu managen und die Daten in Python verarbeite. Anschließend werden diese Daten im Frontend dargestellt.
               </p>
               <div className="pointer-events-auto ">
-                <ButtonMain title="Lebenslauf herunterladen" />
+                <ButtonMain title="Lebenslauf herunterladen" onClick={downloadPDF}/>
               </div>
             </motion.div>
 

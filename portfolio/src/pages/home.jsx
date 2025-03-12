@@ -17,17 +17,20 @@ export default function Home() {
             <h1 className="font-code text-sm">Hi, mein Name ist</h1>
             <h2>Lino De Marco</h2>
             <h3>
-              Ich bin angehender
-              <span className="text-primary"> Software Entwickler.</span>
+              Ich bin
+              <span className="text-primary"> Junior Software Entwickler.</span>
             </h3>
           </div>
-          <p className=" text-gray-300">
-            Mit meiner Fähigkeit, komplexe Daten im Backend zu verarbeiten und
-            robuste Backend-Strukturen aufzubauen, sorge ich für stabile und
-            effiziente Anwendungen. Gleichzeitig setze ich vorgegebene Designs
-            im Frontend präzise um und schaffe intuitive Benutzeroberflächen.
-            Ich liebe es, diese beiden Welten zu kombinieren und als
-            Full-Stack-Entwickler ganzheitliche Lösungen zu schaffen.
+          <p className="text-sm text-gray-300">
+            Schon immer war es meine Leidenschaft, Probleme zu lösen – eine
+            Fähigkeit, die mir in der Softwareentwicklung und Projektbearbeitung
+            zugutekommt. Mit meiner Expertise, komplexe Daten im Backend zu
+            verarbeiten und stabile, robuste Strukturen aufzubauen, sorge ich
+            für effiziente und zuverlässige Anwendungen. Gleichzeitig setze ich
+            vorgegebene Designs im Frontend präzise um und kreiere intuitive
+            Benutzeroberflächen. Diese Kombination ermöglicht es mir, als
+            Full-Stack-Entwickler ganzheitliche und innovative Lösungen zu
+            realisieren, die sowohl funktional als auch benutzerfreundlich sind.
           </p>
         </motion.div>
 

@@ -1,14 +1,13 @@
 import BulbImg from "../components/images/bulb_img";
 import { motion } from "framer-motion";
-import ContactForm from "../components/forms/contact_form";
+import ContactForm from "../components/forms/form_contact";
 export default function Contact() {
   return (
     <>
       <BulbImg />
-
-      <div className="">
-        <ContactForm titleBtn="Kontaktiere mich"/>
-      </div>
+      <motion.div className="flex justify-center items-center h-full w-full">
+        <ContactForm titleBtn="Nachricht senden" />
+      </motion.div>
     </>
   );
 }

@@ -6,7 +6,6 @@ import "swiper/css/pagination";
 import { EffectCube, Pagination } from "swiper/modules";
 
 export default function CardCarousel({ onSlideHover }) {
-
   const slidesData = [
     {
       title: "SnippetVault",
@@ -18,11 +17,14 @@ export default function CardCarousel({ onSlideHover }) {
     },
     {
       title: "StudyVibe",
-      description: "Beschreibung für Slide 2.",
+      description:
+        "StudyVibe ist eine Online-Plattform, die Mathematik durch Animationen und interaktive Elemente verständlich macht. Nutzer absolvieren verschiedene Mathe-Kurse, in denen komplexe Inhalte visuell vermittelt werden. Als Nebenprojekt, an dem ich mit zwei Partnern arbeite, bin ich für die Full-Stack-Entwicklung und -Wartung verantwortlich. Obwohl StudyVibe noch in Entwicklung ist, freuen wir uns auf spannende Updates.",
     },
     {
-      title: "DataAnalysis",
-      description: "Beschreibung für Slide 3.",
+      title: "DataSmart Point Academy",
+      description:
+        "Der Träger DataSmart Point hat mir durch seine datengetriebene Weiterbildung grundlegende Konzepte in der Analyse von Daten sowie in der Erstellung skalierbarer Datenbanken vermittelt. Dank DataSmartPoint kann ich die Softwareentwicklung gekonnt mit Datenanalyse und Datenbankdesign im Full-Stack verknüpfen. Dadurch kann ich auch komplexe Projekte effizient und zielgerichtet umsetzen.",
+      Url: "https://datasmartpoint.com/",
     },
   ];
 
@@ -30,13 +32,13 @@ export default function CardCarousel({ onSlideHover }) {
     if (onSlideHover) {
       onSlideHover(index, slidesData[index]);
     }
-  };
+  }
 
   function handleMouseLeave() {
     if (onSlideHover) {
       onSlideHover(null, null);
     }
-  };
+  }
 
   return (
     <>
@@ -69,7 +71,9 @@ export default function CardCarousel({ onSlideHover }) {
               <p className="text-gray-300 mb-5">{slide.description}</p>
               {slide.Url && (
                 <li className="text-primary">
-                  <a href={slide.Url}>{slide.Url}</a>
+                  <a href={slide.Url} target="_blank" rel="noopener noreferrer">
+                    {slide.Url}
+                  </a>
                 </li>
               )}
               {slide.Username && (

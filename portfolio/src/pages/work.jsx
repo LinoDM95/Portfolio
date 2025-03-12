@@ -13,9 +13,9 @@ export default function Work() {
     }
   }
   function getImagePath(title) {
-    const imageTitle = title.replace(/\s+/g, "").toLowerCase();
+    const imageTitle = title.replace(/\s+/g, "_").toLowerCase();
     return `/public/${imageTitle}.png`;
-  };
+  }
 
   return (
     <>
@@ -38,17 +38,23 @@ export default function Work() {
           <motion.div
             initial={{ x: -20, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
-            transition={{ delay: 0.8, duration: 1, ease: "easeInOut" }}
+            transition={{ duration: 1, ease: "easeInOut" }}
             className="flex flex-col gap-5"
           >
             <h2 className="font-semibold text-4xl text-white">
-              Überwundene <span className="text-primary">Meilensteine</span>
+              Karriere & Projekte:{" "}
+              <span className="text-primary">Mein persönlicher Werdegang</span>
             </h2>
             <p className="text-gray-300">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem,
-              ipsam! Debitis voluptas ullam deleniti. Molestias nobis distinctio
-              cumque tempora vel odio a aliquam aliquid. A praesentium error
-              excepturi itaque ratione!
+              Auf meinem Weg als Entwickler habe ich mich zahlreichen
+              Herausforderungen gestellt, die meine Leidenschaft für das Lösen
+              komplexer Probleme und meinen Drang zur stetigen Weiterbildung
+              widerspiegeln. Jedes meiner Projekte – sei es die datengetriebene
+              Analyse, der Aufbau robuster Backend-Strukturen oder die Umsetzung
+              intuitiver Frontend-Designs – hat mich persönlich weitergebracht.
+              Auf dieser Seite teile ich meine Reise, präsentiere meine Erfolge
+              und zeige, wie ich mit Begeisterung an ganzheitlichen und
+              zukunftsweisenden Lösungen arbeite.
             </p>
           </motion.div>
         )}
