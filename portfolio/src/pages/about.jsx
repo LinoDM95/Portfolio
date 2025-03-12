@@ -26,10 +26,10 @@ export default function About() {
 
   function downloadPDF() {
     const link = document.createElement("a");
-    link.href = "/Lebenslauf_Lino_De_Marco.pdf"; 
-    link.download = "Lebenslauf_Lino_De_Marco.pdf"; 
+    link.href = "/Lebenslauf_Lino_De_Marco.pdf";
+    link.download = "Lebenslauf_Lino_De_Marco.pdf";
     link.click();
-  };
+  }
 
   return (
     <>
@@ -41,15 +41,27 @@ export default function About() {
               initial={{ x: -20, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ delay: 0.8, duration: 1, ease: "easeInOut" }}
-              className="flex flex-col w-1/3 gap-5">
+              className="flex flex-col w-1/3 gap-5"
+            >
               <h2 className="font-semibold text-4xl ">
-              Von Daten zur  <span className="text-primary">Software</span> – mein Weg zum Software Entwickler.
+                Von Daten zur <span className="text-primary">Software</span> –
+                mein Weg zum Software Entwickler.
               </h2>
               <p className="text-gray-300">
-              Während meiner Weiterbildung in der Datenanalyse habe ich meine Leidenschaft für Softwareentwicklung entdeckt. In der Zeit habe ich mir Full-Stack Development beigebracht und wurde dabei vom CEO der co-dex GmbH begleitet. Jetzt kombiniere ich meine Datenkenntnisse mit der Softwareentwicklung, indem ich beispielsweise mit SQL arbeite, um Datenbanken zu managen und die Daten in Python verarbeite. Anschließend werden diese Daten im Frontend dargestellt.
+                Während meiner Weiterbildung in der Datenanalyse habe ich meine
+                Leidenschaft für Softwareentwicklung entdeckt. In der Zeit habe
+                ich mir Full-Stack Development beigebracht und wurde dabei vom
+                CEO der co-dex GmbH begleitet. Jetzt kombiniere ich meine
+                Datenkenntnisse mit der Softwareentwicklung, indem ich
+                beispielsweise mit SQL arbeite, um Datenbanken zu managen und
+                die Daten in Python verarbeite. Anschließend werden diese Daten
+                im Frontend dargestellt.
               </p>
               <div className="pointer-events-auto ">
-                <ButtonMain title="Lebenslauf herunterladen" onClick={downloadPDF}/>
+                <ButtonMain
+                  title="Lebenslauf herunterladen"
+                  onClick={downloadPDF}
+                />
               </div>
             </motion.div>
 
@@ -67,13 +79,13 @@ export default function About() {
                   isActive={activeTab === "language"}
                 />
                 <ButtonLink
-                  title="Skills"
+                  title="Softskills"
                   textSize={buttonConfig.textSize}
                   onClick={() => handleTabClick("skills")}
                   isActive={activeTab === "skills"}
                 />
                 <ButtonLink
-                  title="Motivation"
+                  title="Entwicklung"
                   textSize={buttonConfig.textSize}
                   onClick={() => handleTabClick("motivation")}
                   isActive={activeTab === "motivation"}
@@ -105,18 +117,30 @@ export default function About() {
                 )}
                 {activeTab === "skills" && (
                   <p>
-                    2 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Labore, non culpa ea sint expedita rem in eveniet fugiat,
-                    aspernatur, atque commodi? Impedit, commodi! Dicta, hic
-                    vero? Sapiente minima repellendus maxime.
+                    Ich bin ein erfahrener Problemlöser, der komplexe Themen in
+                    überschaubare Einzelschritte zerlegen kann, um Abläufe
+                    besser zu verstehen. Durch meine Tätigkeit in der
+                    Teamleitung habe ich gelernt, wie wichtig eine gute
+                    Zusammenarbeit ist – Flexibilität und Zeitmanagement sind
+                    dabei unverzichtbare Werkzeuge. Kritik betrachte ich als
+                    wertvolles Feedback, das mir hilft, mich kontinuierlich
+                    weiterzuentwickeln.
                   </p>
                 )}
                 {activeTab === "motivation" && (
                   <p>
-                    3 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Labore, non culpa ea sint expedita rem in eveniet fugiat,
-                    aspernatur, atque commodi? Impedit, commodi! Dicta, hic
-                    vero? Sapiente minima repellendus maxime.
+                    Zunächst möchte ich mich intensiv in der Softwareentwicklung
+                    etablieren und durch praxisnahe Projekte, kontinuierliche
+                    Weiterbildung und den Austausch mit erfahrenen Entwicklern
+                    mein technisches und methodisches Know-how vertiefen. Im
+                    Anschluss plane ich, mich gezielt in DevOps
+                    weiterzuentwickeln. Mein Ziel ist es, die Prozesse der
+                    Softwarebereitstellung und -wartung zu optimieren, um so
+                    effizientere und qualitativ hochwertigere Softwarelösungen
+                    zu schaffen. Dabei setze ich auf moderne
+                    Automatisierungstools und CI/CD-Pipelines, um die
+                    Zusammenarbeit zwischen Entwicklung und Betrieb nahtlos zu
+                    gestalten.
                   </p>
                 )}
               </div>

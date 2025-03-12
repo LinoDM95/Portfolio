@@ -18,7 +18,7 @@ export default function Home() {
             <h2>Lino De Marco</h2>
             <h3>
               Ich bin
-              <span className="text-primary"> Junior Software Entwickler.</span>
+              <span className="text-primary"> Software Entwickler.</span>
             </h3>
           </div>
           <p className="text-sm text-gray-300">
