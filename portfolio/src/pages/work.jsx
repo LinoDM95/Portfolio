@@ -2,6 +2,18 @@ import React, { useState } from "react";
 import BulbImg from "../components/images/bulb_img";
 import CardCarousel from "../components/carousels/card_carousel";
 import { motion } from "framer-motion";
+
+import SnippetVault from "../../public/SnippetVault.png";
+import StudyVibe from "../../public/StudyVibe.png";
+import DataSmartPointAcademy from "../../public/DataSMart_Point_Academy.png";
+
+// Mapping der Titel zu den importierten Bildern
+const imageMapping = {
+  snippetvault: SnippetVault,
+  studyvibe: StudyVibe,
+  datasmart_point_academy: DataSmartPointAcademy,
+};
+
 export default function Work() {
   const [hoveredSlide, setHoveredSlide] = useState(null);
 
@@ -12,9 +24,11 @@ export default function Work() {
       setHoveredSlide(null);
     }
   }
-  function getImagePath(title) {
-    const imageTitle = title.replace(/\s+/g, "_").toLowerCase();
-    return `/public/${imageTitle}.png`;
+
+  // Nutzt das Mapping, um den korrekten Import zu erhalten
+  function getImage(title) {
+    const imageKey = title.replace(/\s+/g, "_").toLowerCase();
+    return imageMapping[imageKey];
   }
 
   return (
@@ -29,7 +43,7 @@ export default function Work() {
             className="flex flex-col gap-5 bg-[#2e2257] border-1 border-primary p-4 rounded-lg"
           >
             <img
-              src={getImagePath(hoveredSlide.slideData.title)}
+              src={getImage(hoveredSlide.slideData.title)}
               alt={hoveredSlide.slideData.title}
             />
           </motion.div>
