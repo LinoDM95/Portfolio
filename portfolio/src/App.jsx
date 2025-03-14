@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 // Nav
 import Sidebar from "./components/sidebar";
+import Header from "./components/header";
 // Pages
 import Home from "./pages/home";
 import About from "./pages/about";
@@ -43,6 +44,7 @@ export default function App() {
     <div className="bg-main h-screen">
       <Router>
         <ChangePage />
+        <Header />
         <Sidebar />
         <TopLeftImg />
         <BottomRightImg />

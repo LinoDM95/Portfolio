@@ -7,13 +7,11 @@ import { RiContactsBookFill } from "react-icons/ri";
 const configIcon = {
   colorMain: "text-white",
   colorHover: "hover:text-primary",
-  size: 25,
+  size: 30,
 };
 
 export default function Sidebar() {
   return (
-    // Im Mobile-Modus: Sidebar unten, volle Breite
-    // Im Desktop-Modus: Sidebar rechts in der Mitte
     <div
       className="
         fixed 
