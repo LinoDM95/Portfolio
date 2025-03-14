@@ -6,12 +6,12 @@ export default function Home() {
   return (
     <div className="flex items-center justify-center h-screen w-screen overflow-hidden ">
       <Particle />
-      <div className="flex flex-col xl:flex-row items-center justify-center z-5 w-full h-full  overflow-hidden m-20 ">
+      <div className="flex flex-col xl:flex-row items-center justify-center z-5 w-full h-full  overflow-hidden m-7 lg:m-20 ">
         <motion.div
           initial={{ y: -20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.8, duration: 1, ease: "easeInOut" }}
-          className="flex flex-col text-white gap-5 w-full xl:w-1/3 h-full justify-center px-4 sm:px-0 "
+          className="flex flex-col text-white gap-5 w-full xl:w-1/3 h-full justify-center sm:px-0 "
         >
           <div className="font-semibold text-4xl mt-10 sm:mt-50">
             <h1 className="font-code text-sm">Hi, mein Name ist</h1>
@@ -44,7 +44,7 @@ export default function Home() {
             <img
               src={Avatar}
               alt="avatar"
-              className="hidden w-38 sm:block sm:w-85 md:w-99 lg:w-110 xl:w-auto h-auto object-contain self-end"
+              className=" w-38 sm:block sm:w-85 md:w-99 lg:w-110 xl:w-auto h-auto object-contain self-end"
             />
           </motion.div>
         </motion.div>
