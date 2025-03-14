@@ -7,7 +7,7 @@ import { RiContactsBookFill } from "react-icons/ri";
 const configIcon = {
   colorMain: "text-white",
   colorHover: "hover:text-primary",
-  size: 30,
+  size: 35,
 };
 
 export default function Sidebar() {
