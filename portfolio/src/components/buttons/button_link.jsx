@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 export default function ButtonLink({
   title = "Click me",
   textColor = "text-white",
@@ -12,9 +14,21 @@ export default function ButtonLink({
       onClick={onClick}
       className={`${textColor} ${hoverColor} ${fontKind} ${textSize} hover:cursor-pointer relative overflow-hidden
         after:absolute after:right-0 after:bottom-0 after:h-[1.7px] after:rounded-lg after:w-[0px] after:bg-white active:after:bg-white active:after:duration-100
-        after:transition-all after:duration-300 hover:after:w-full hover:after:left-0 hover:after:bg-primary ${isActive ? "after:w-full after:bg-primary" : ""}  `}
+        after:transition-all after:duration-300 hover:after:w-full hover:after:left-0 hover:after:bg-primary ${
+          isActive ? "after:w-full after:bg-primary" : ""
+        }  `}
     >
       {title}
     </button>
   );
 }
+
+ButtonLink.propTypes = {
+  title: PropTypes.string,
+  textColor: PropTypes.string,
+  hoverColor: PropTypes.string,
+  fontKind: PropTypes.string,
+  textSize: PropTypes.string,
+  onClick: PropTypes.func,
+  isActive: PropTypes.bool,
+};
